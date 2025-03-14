@@ -1,0 +1,6 @@
+<h1>{{ object.titre }}</h1>
+<p>{{ object.contenu }}</p>
+<p>Publié par {{ object.auteur }} le {{ object.date_publication }}</p>
+<img src="{{ object.image.url }}" alt="{{ object.titre }}">
+<a href="{% url 'article-update' object.pk %}">Modifier</a>
+<a href="{% url 'article-delete' object.pk %}">Supprimer</a>
